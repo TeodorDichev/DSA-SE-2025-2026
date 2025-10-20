@@ -1,3 +1,12 @@
+// https://leetcode.com/problems/subsets/
+
+#include <iostream>
+#include <vector>
+#include <math.h>
+#include <bitset>
+
+using namespace std;
+
 class Solution {
     vector<vector<int>> result;
 
@@ -10,10 +19,10 @@ class Solution {
         }
         
         subset.push_back(nums[index]);
-        rec(nums, index + 1, subset);
+        backtrack(nums, index + 1, subset);
         
         subset.pop_back();
-        rec(nums, index + 1, subset);
+        backtrack(nums, index + 1, subset);
     }
 public:
     vector<vector<int>> subsets(vector<int>& nums) {

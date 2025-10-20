@@ -1,3 +1,13 @@
+// https://leetcode.com/problems/two-city-scheduling/description/
+
+#include <iostream>
+#include <vector>
+#include <math.h>
+#include <bitset>
+#include <algorithm>
+
+using namespace std;
+
 bool cmp(const vector<int>& a, const vector<int>& b) {
     return a[0] - a[1] < b[0] - b[1];
 }
@@ -6,7 +16,7 @@ public:
     // Complexity depends on the implementation of std::sort
     // C++: Time - O(N * logN) | Space - O(logN)
     int twoCitySchedCost(vector<vector<int>>& costs) {
-        std::sort(costs.begin(), costs.end(), [](const vector<int>& a, const vector<int>& b){
+        sort(costs.begin(), costs.end(), [](const vector<int>& a, const vector<int>& b){
             return a[0] - a[1] < b[0] - b[1];
         });
 
