@@ -1,3 +1,8 @@
+#include<string>
+#include<vector>
+
+using namespace std;
+
 char findTheDifference(string s, string t) {
     vector<int> counts(26, 0);
     for(auto& c:s)

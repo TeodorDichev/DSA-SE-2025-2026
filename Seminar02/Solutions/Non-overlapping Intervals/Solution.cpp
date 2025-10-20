@@ -1,3 +1,8 @@
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
 bool compare(vector<int>& lhs, vector<int>& rhs)
 {
     return lhs[1] < rhs[1];

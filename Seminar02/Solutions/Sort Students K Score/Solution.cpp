@@ -1,8 +1,13 @@
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
 int globalK = 0;
 
 bool compare(vector<int>& v1, vector<int>& v2)
 {
-        return v1[kk] > v2[kk]; 
+    return v1[globalK] > v2[globalK]; 
 }
 
 class Solution {
