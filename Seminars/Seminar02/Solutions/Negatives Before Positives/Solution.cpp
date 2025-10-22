@@ -1,5 +1,6 @@
 // Example - Partition by Hoare
 
+#include <cstddef>
 template <typename T>
 int partition(T* arr, int len, T pivot)
 {

@@ -133,8 +133,7 @@ void counting_sort_pairs(vector<pair<int, string>> &arr)
 
     int K = (*max_element(arr.begin(), arr.end(), [](const pair<int, string> &a, const pair<int, string> &b)
                           { return a.first < b.first; }))
-                .first +
-            1;
+                .first + 1;
 
     vector<pair<int, string>> output(N);
     vector<int> count(K, 0);

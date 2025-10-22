@@ -1,3 +1,5 @@
+#include <vector>
+
 template <class T>
 void merge(T* firstArr, int firstLen, T* secondArr, int secondLen, T* res)
 {
