@@ -23,4 +23,6 @@
 
 [10. Linked List cycle 2](https://leetcode.com/problems/linked-list-cycle-ii/)
 
-Merge and Partition
+[Merge](./Misc/Merge/mergeExample.cpp)
+
+[Partition](./Misc/Partition/partitionExample.cpp)
