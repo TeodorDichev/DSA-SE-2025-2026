@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/intersection-of-two-linked-lists/
+
 class Solution {
 public:
     size_t getLen(ListNode* head)
@@ -11,6 +13,7 @@ public:
 
         return count;
     }
+
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         if(!headA || !headB)
             return nullptr;

@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/odd-even-linked-list/
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -23,7 +25,7 @@ public:
         size_t index = 1;
         while(iter) {
             auto current = iter;
-            iter = iter->next;
+            iter = iter->next;  
             if(index & 1) {
                 odd->next = current;
                 odd = odd->next;
