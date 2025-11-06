@@ -18,7 +18,7 @@ struct ListNode
     ListNode* next;
     int val;
 };
-
+    
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {

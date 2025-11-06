@@ -53,3 +53,64 @@ public:
         return ptr;
     }
 };
+
+//https://www.hackerrank.com/contests/sda-hw-3-2025/challenges/merge-two-sorted-linked-lists/submissions/code/1399786047
+// second solution
+// Complete the mergeLists function below.
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+SinglyLinkedListNode* mergeLists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
+    SinglyLinkedListNode* newHead = nullptr;
+    
+    if(head1 && head2 && head1->data < head2->data) {
+        newHead = new SinglyLinkedListNode(head1->data);
+        head1 = head1->next;
+    }
+    else if(head1 && head2 && head1->data >= head2->data) {
+        newHead = new SinglyLinkedListNode(head2->data);
+        head2 = head2->next;
+    }
+    else {
+        return newHead;
+    }
+    
+    SinglyLinkedListNode* nextNode = nullptr, *prevNode = newHead;
+    while(head1 && head2) {
+        if(head1->data > head2->data) {
+            nextNode = new SinglyLinkedListNode(head2->data);
+            prevNode->next = nextNode;
+            prevNode = nextNode;
+            head2 = head2->next;
+        } else {
+            nextNode = new SinglyLinkedListNode(head1->data);
+            prevNode->next = nextNode;
+            prevNode = nextNode;
+            head1 = head1->next;
+        }
+    }
+    
+    while(head1) {
+        nextNode = new SinglyLinkedListNode(head1->data);
+        prevNode->next = nextNode;
+        prevNode = nextNode;
+        head1 = head1->next;
+    }
+    
+    while(head2) {
+        nextNode = new SinglyLinkedListNode(head2->data);
+        prevNode->next = nextNode;
+        prevNode = nextNode;
+        head2 = head2->next;
+    }
+    
+    return newHead;
+
+}
