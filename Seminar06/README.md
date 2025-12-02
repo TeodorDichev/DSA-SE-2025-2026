@@ -165,3 +165,5 @@ BalanceFactor(n) = Height(n->right) - Height(n->left)
 [13. Continuous Subarrays](https://leetcode.com/problems/continuous-subarrays/description/) - Отново наредбата е от значение и ползваме multiset или map.
 
 [14. Wordle]()
+
+(**EXTRA**)[Space Explorers 1](https://www.hackerrank.com/contests/algoritmiclash-2025/challenges/space-explorers-1/) - Еквивалент на задачата за Sliding Window Median от leetcode
