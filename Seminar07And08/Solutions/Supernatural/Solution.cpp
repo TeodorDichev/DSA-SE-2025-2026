@@ -7,36 +7,38 @@
 using namespace std;
 
 void solve(const vector<int>& nums, int k) {
-        int sum = 0;
-        int resCount = 0;
-        int resMaxLength = 0;
-        unordered_map<int, int> countMap;
-        unordered_map<int, int> firstIndexMap;
+    unordered_map<int,int> countMap;
+    unordered_map<int,int> firstIndexMap;
 
-        for(int i = 0; i < nums.size(); i++)
-        {
-            sum += nums[i];
-            int targetPrefix = sum - k;
+    countMap[0] = 1;
+    firstIndexMap[0] = -1;
 
-            if(countMap.count(targetPrefix) != 0)
-                resCount += countMap[targetPrefix];
-            if(sum == k)
-                resCount++;
+    int sum = 0;
+    int resCount = 0;
+    int resMaxLength = 0;
 
-            countMap[sum]++;
+    for (int i = 0; i < nums.size(); i++) {
+        sum += nums[i];
+        int target = sum - k;
 
-            if(firstIndexMap.count(targetPrefix) != 0)
-                resMaxLength = max(i - firstIndexMap[targetPrefix], resMaxLength);
-            else 
-                firstIndexMap[targetPrefix] = i;
-            
-            if(sum == k)
-                resMaxLength = max(resMaxLength, i+1); // Max is not needed here actually
+        if (countMap.count(target))
+            resCount += countMap[target];
 
-        }
-       
-        cout << resMaxLength << ' ' << resCount;
+        countMap[sum]++;
+
+        if (firstIndexMap.count(target))
+            resMaxLength = max(resMaxLength, i - firstIndexMap[target]);
+
+        if (!firstIndexMap.count(sum))
+            firstIndexMap[sum] = i;
     }
+    
+    if (resMaxLength == 0 && resCount == 0) {
+        cout << -1;
+    } else {
+        cout << resMaxLength << " " << resCount;
+    }
+}
 
 int main() {
     int n, k; 
