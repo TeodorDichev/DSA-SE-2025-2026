@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 // This task is similar to fibonacci and can be solved without DP array
 class Solution {
 public:

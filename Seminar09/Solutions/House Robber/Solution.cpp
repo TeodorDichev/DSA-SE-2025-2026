@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 // Table: DP[i] - the maximum value we can get from robbing houses [0...i]
 // Rec: DP[i] = max(DP[i-1], DP[i-2] + nums[i])
 class Solution {

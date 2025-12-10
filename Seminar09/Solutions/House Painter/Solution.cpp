@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 // Tables: DPb[i] - минималната цена за боядисване на къщите от 0 до i, ако последната е синя
 // Tables: DPr[i] - минималната цена за боядисване на къщите от 0 до i, ако последната е червена
 // Tables: DPg[i] - минималната цена за боядисване на къщите от 0 до i, ако последната е зелена
@@ -5,7 +8,7 @@
 // Rec: DPg[i] = costG[i] +  min(DPr[i-1], DPb[i-1])
 // Rec: DPb[i] = costB[i] +  min(DPg[i-1], DPr[i-1])
 
-size_t Solve(vector<int> costR, vector<int> costG, vector<int> costB)
+size_t Solve(vector<int> costR, vector<int> costG, vector<int> costB, size_t n)
 {
     vector<int> dpr; vector<int> dpb; vector<int> dpg;
     dpr.push_back(costR[0]);

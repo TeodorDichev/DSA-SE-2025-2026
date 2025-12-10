@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 // 08. Longest Common Subsequence
 //// Table - DP[n][m] = longest common subsequence of text1[n] text2[m]
 //// Rec - DP[n][m] = if text1[n] == text2[m]: DP[n-1][m-1] + 1

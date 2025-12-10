@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 // Table: DP[i] contains the minimum number of coins needed to achieve sum = i
 // Rec: DP[i] = min(DP[i - c] + 1) for each c belonging to the available Coins
 class Solution {

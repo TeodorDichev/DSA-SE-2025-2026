@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 // 07. Longest Palindromic Substring
 //// Table DP[i][j] - is the substring i...j palindromic
 //// Rec: DP[i][j] = s[i]==s[j] && DP[i+1][j-1]  (if i - j <= 2 then we dont check DP[i+1][j-1] - empty string) 

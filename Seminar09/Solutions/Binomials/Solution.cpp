@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 // 02 - Binomials
 //// Table [n][k] = n choose k
 //// Rec: (N K) = (N-1 K-1) + (N-1 K)

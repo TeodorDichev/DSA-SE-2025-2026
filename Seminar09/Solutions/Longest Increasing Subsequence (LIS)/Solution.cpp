@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 // 06. Longest Increasing Subsequence (With path rebuilding)
 //// Table: DP[i] - the longest increasing subsequence ending at the current index 'i'
 //// Rec: DP[i] = max(DP[j] + 1) for j < i and arr[j] < arr[i]
