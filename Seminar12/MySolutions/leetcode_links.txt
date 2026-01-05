@@ -1,0 +1,11 @@
+Dijkstra
+https://leetcode.com/problems/network-delay-time/description/
+https://leetcode.com/problems/path-with-maximum-probability/description/
+ - matrix
+   https://leetcode.com/problems/path-with-minimum-effort/description/
+   https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/description/
+   https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/description/
+   https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid/description/
+
+Bellman-ford
+https://leetcode.com/problems/cheapest-flights-within-k-stops/
